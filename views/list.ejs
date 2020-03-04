@@ -11,5 +11,16 @@
     <% } else { %>
     <h1 style="color: purple">Title <%= kindOfDay %>!</h1>
     <% } %>
+    <ul>
+      <li>test</li>
+      <% for (let i = 0; i < newItem.length; i++) { %> 
+         <li><%newItem[i]%></li>   
+        <% } %>
+    </ul>
+    <form action="/" method="post">
+      <input type="text" name="item" />
+      <button type="su">Valider</button>
+    </form>
+    <h3><%= newItem %></h3>
   </body>
 </html>
