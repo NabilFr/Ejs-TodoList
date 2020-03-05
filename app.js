@@ -10,22 +10,12 @@ const optionsDate = {
 const app = express();
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 let items = [];
 
 app.get('/', function(req, res) {
-  let dayOftheWeek = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-    'Sunday'
-  ];
-
   res.render('list', {
     kindOfDay: new Date().toLocaleDateString('en-GB', optionsDate),
     newItem: items
@@ -33,8 +23,8 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function(req, res) {
-  if (req.body.item != '') {
-    items.push(req.body.item);
+  if (req.body.newitem != '') {
+    items.push(req.body.newitem);
   }
 
   res.redirect('/');

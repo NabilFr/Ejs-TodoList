@@ -1,27 +1,28 @@
+<!-- list.ejs-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>ToDo List</title>
   </head>
   <body>
-    <% if (kindOfDay === 'Wednesday') { %>
-    <h1 style="color: red">Title <%= kindOfDay %>!</h1>
-    <% } else { %>
-    <h1 style="color: purple">Title <%= kindOfDay %>!</h1>
-    <% } %>
-    <ul>
-      <li>test</li>
+    <div class="box" id="heading">
+      <h1><%= kindOfDay %></h1>
+    </div>
+
+    <div class="box">
       <% for (let i = 0; i < newItem.length; i++) { %>
-      <li><%= newItem[i]%></li>
+      <div class="item">
+        <input type="checkbox" />
+        <p><%= newItem[i] %></p>
+      </div>
       <% } %>
-    </ul>
-    <form action="/" method="post">
-      <input type="text" name="item" />
-      <button type="su">Valider</button>
-    </form>
-    <h3><%= newItem %></h3>
-    <h2>titl</h2>
+      <form class="item" action="/" method="post">
+        <input type="text" name="newitem" placeholder="New Item" autocomplete="off" />
+        <button type="submit" name="button">+</button>
+      </form>
+    </div>
   </body>
 </html>
