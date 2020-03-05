@@ -13,14 +13,15 @@
     <% } %>
     <ul>
       <li>test</li>
-      <% for (let i = 0; i < newItem.length; i++) { %> 
-         <li><%newItem[i]%></li>   
-        <% } %>
+      <% for (let i = 0; i < newItem.length; i++) { %>
+      <li><%= newItem[i]%></li>
+      <% } %>
     </ul>
     <form action="/" method="post">
       <input type="text" name="item" />
       <button type="su">Valider</button>
     </form>
     <h3><%= newItem %></h3>
+    <h2>title</h2>
   </body>
 </html>
