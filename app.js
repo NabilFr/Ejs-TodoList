@@ -12,6 +12,7 @@ let items = ['garden'];
 let workItems = ['lunch'];
 
 app.get('/', function(req, res) {
+  debugger;
   let day = date.getDay();
   res.render('list', {
     listTitle: day,
