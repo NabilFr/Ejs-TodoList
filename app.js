@@ -21,7 +21,7 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function(req, res) {
-  if (req.body.newItem != '' && req.body.list === 'Work') {
+  if (req.body.newItem != '' && req.body.list === 'TODOLIST') {
     workItems.push(req.body.newItem);
     res.redirect('/work');
   } else {
@@ -32,7 +32,7 @@ app.post('/', function(req, res) {
 
 app.get('/work', function(req, res) {
   res.render('list', {
-    listTitle: 'Work',
+    listTitle: 'TODOLIST',
     newItem: workItems
   });
 });
