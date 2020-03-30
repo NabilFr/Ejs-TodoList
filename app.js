@@ -8,8 +8,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
-let items = ['garden'];
-let workItems = ['lunch'];
+let items = ['Docker'];
+let workItems = ['Kubernetes'];
 
 app.get('/', function(req, res) {
   debugger;
