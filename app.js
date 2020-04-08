@@ -16,7 +16,7 @@ app.get('/', function(req, res) {
   let day = date.getDay();
   res.render('list', {
     listTitle: day,
-    newItem: items
+    newItem: items,
   });
 });
 
@@ -33,7 +33,7 @@ app.post('/', function(req, res) {
 app.get('/work', function(req, res) {
   res.render('list', {
     listTitle: 'TODOLIST',
-    newItem: workItems
+    newItem: workItems,
   });
 });
 
@@ -44,3 +44,5 @@ app.get('/about', function(req, res) {
 app.listen(3000, function() {
   console.log('Server started on port 3000');
 });
+
+// a
